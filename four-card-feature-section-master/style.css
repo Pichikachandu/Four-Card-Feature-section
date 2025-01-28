@@ -1,0 +1,262 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+  }
+:root{
+/* Colors */
+
+--Red: hsl(0, 78%, 62%);
+--Cyan: hsl(180, 62%, 55%);
+--Orange: hsl(34, 97%, 64%);
+--Blue: hsl(212, 86%, 64%);
+--Very-Dark-Blue: hsl(234, 12%, 34%);
+--Grayish-Blue: hsl(229, 6%, 66%);
+--Very-Light-Gray: hsl(0, 0%, 98%);
+}
+main{
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.first{
+    margin-left: 1rem;
+    color:var(--Grayish-Blue);
+    font-weight: 400;
+}
+.second{
+    color: var(--Very-Dark-Blue);
+}
+.third {
+    color: var(--Grayish-Blue);
+    width: 400px;
+    font-size: 0.75rem;
+    text-align:center; /* Align text to the right */
+    margin-left: 3rem; /* Optional: Add margin to push it to the right */
+    margin-right: 0; /* Optional: Reset any right margin */
+    margin-top: 1rem;
+    transition: all 0.3s ease;
+}
+.card-container {
+    transition: all 0.3s ease; /* Smooth resizing effect */
+}
+.header-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    
+}
+.cards {
+    display: flex;
+    flex-direction: row; /* For desktop - horizontal layout */
+    justify-content: center; /* Center-align all cards horizontally */
+    align-items: center; /* Align all cards vertically */
+    gap: 2rem; /* Add spacing between cards */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    margin-top: 3rem;
+}
+
+/* .card0 {
+    height: 165px;
+    width: 300px;
+    background-color: var(--Very-Light-Gray);
+    border-radius: 0.5rem;
+    border-top: 4px solid var(--Cyan);
+    padding: 20px;
+    margin: 0.5rem;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+} */
+
+.double-container {
+    display: flex;
+    flex-direction: column; /* Stack the cards vertically */
+    justify-content: center; /* Center align within the container */
+    gap: 1.5rem; /* Add space between the two cards */
+}
+
+.card-header p {
+    color: var(--Grayish-Blue);
+    font-size: 0.95rem;
+}
+
+.icon img {
+    width: 50px;
+}
+
+.icon {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 1.75rem;
+}
+
+/* .card2{
+    height: 165px;
+    width: 300px;
+    background-color: var(--Very-Light-Gray);
+    border-radius: 0.5rem;
+    border-top: 4px solid var(--Red);
+    padding: 20px;
+    margin: 0.5rem;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+}
+.card3{
+    height: 165px;
+    width: 300px;
+    background-color: var(--Very-Light-Gray);
+    border-radius: 0.5rem;
+    border-top: 4px solid var(--Orange);
+    padding: 20px;
+    margin: 0.5rem;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+}
+.card4{
+    height: 165px;
+    width: 300px;
+    background-color: var(--Very-Light-Gray);
+    border-radius: 0.5rem;
+    border-top: 4px solid var(--Blue);
+    padding: 20px;
+    margin: 0.5rem;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+} */
+.card0,
+.card2,
+.card3,
+.card4 {
+    width: 300px; /* Ensure consistent width */
+    height: 165px; /* Ensure consistent height */
+    background-color: var(--Very-Light-Gray);
+    border-radius: 0.5rem;
+    padding: 20px;
+    margin: 0.5rem; /* Equal margin for all sides */
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+    align-self: center; /* Ensure all cards align vertically */
+}
+
+/* Ensure consistent border-top for each card */
+.card0 {
+    border-top: 4px solid var(--Cyan);
+}
+
+.card2 {
+    border-top: 4px solid var(--Red);
+}
+
+.card3 {
+    border-top: 4px solid var(--Orange);
+}
+
+.card4 {
+    border-top: 4px solid var(--Blue);
+}
+.card0,.card4{
+    align-self: center; /* Center align card0 and card4 vertically */
+}
+/* Responsive Design for 768px and below (Large mobile devices/small tablets) */
+@media (max-width: 768px) {
+    .cards {
+        flex-direction: column; /* Stack cards vertically */
+        align-items: center;
+    }
+
+    .card-container {
+        width: 90%; /* Ensure cards fit well on smaller screens */
+    }
+
+    .card0,
+    .card2,
+    .card3,
+    .card4 {
+        width: 90%; /* Set uniform width for all cards */
+        height: auto; /* Adjust height automatically to content */
+        margin: 0.5rem 0; /* Add vertical spacing between cards */
+    }
+
+    .third {
+        width: 90%;
+    }
+}
+
+/* Responsive Design for 576px and below (Small mobile devices) */
+@media (max-width: 576px) {
+    .cards {
+        flex-direction: column; /* Stack cards vertically */
+        align-items: center;
+    }
+
+    .card-container {
+        width: 95%; /* Almost full width for small devices */
+    }
+
+    .card0,
+    .card2,
+    .card3,
+    .card4 {
+        width: 95%; /* Uniform width for all cards */
+        height: auto; /* Ensure consistent height adjustment */
+        margin: 0.5rem 0;
+    }
+
+    .third {
+        width: 95%;
+    }
+}
+
+/* Responsive Design for 400px and below (Extra small screens) */
+@media (max-width: 400px) {
+    .cards {
+        flex-direction: column; /* Stack cards vertically */
+        align-items: center;
+    }
+
+    .card-container {
+        width: 100%; /* Full width on tiny screens */
+    }
+
+    .card0,
+    .card2,
+    .card3,
+    .card4 {
+        width: 100%; /* Full width for all cards */
+        height: auto; /* Adjust height automatically to fit content */
+        margin: 0.5rem 0; /* Maintain spacing */
+    }
+
+    .third {
+        width: 100%;
+    }
+}
+@media (max-width: 300px) {
+    .cards {
+        flex-direction: column; /* Stack cards vertically */
+        align-items: center;
+    }
+
+    .card-container {
+        width: 100%; /* Full width on tiny screens */
+    }
+
+    .card0,
+    .card2,
+    .card3,
+    .card4 {
+        width: 100%; /* Full width for all cards */
+        height: auto; /* Adjust height automatically to fit content */
+        margin: 0.5rem 0; /* Maintain spacing */
+    }
+
+    .third {
+        width: 100%;
+    }
+    .first{
+        width: 100%;
+    }
+    .second{
+        width: 100%;
+    }
+}
